@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Subject and Content Interface</title>
+  <style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label,
+  input,
+  textarea,
+  button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Subject and Content Input</h1>
+    <form id="inputForm">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" rows="8" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="output"></div>
+  </div>
+
+  <script>document.getElementById('inputForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents the default form submission
+    
+    // Get the values from the input fields
+    const subject = document.getElementById('subject').value;
+    const content = document.getElementById('content').value;
+  
+    // Display the submitted data
+    displayData(subject, content);
+  });
+  
+  function displayData(subject, content) {
+    const outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = `
+      <h2>Submitted Data:</h2>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <p><strong>Content:</strong></p>
+      <p>${content}</p>
+    `;
+  }
+  </script>
+</body>
+</html>
