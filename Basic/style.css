@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.timetable {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timetable-grid {
+    display: grid;
+    grid-template-columns: 150px repeat(5, 1fr); /* Adjust the number of columns based on days */
+    gap: 5px;
+}
+
+.timetable-header,
+.time-slot {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.timetable-header {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}

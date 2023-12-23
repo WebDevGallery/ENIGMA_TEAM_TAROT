@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Timetable Form</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.timetable {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timetable:hover {
+    transform: translateY(-5px);
+}
+
+.timetable p {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.timetable input[type="date"],
+.timetable input[type="text"],
+.timetable input[type="submit"] {
+    display: block;
+    width: calc(100% - 18px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.timetable input[type="date"]:focus,
+.timetable input[type="text"]:focus,
+.timetable input[type="submit"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.timetable input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.timetable input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+        <form action="./timetable.php" class="timetable" method="post">
+            <p>date</p>
+            <input type="date" name="date" >
+            <p>
+                9:00-10:00 AM
+            </p>
+            <input type="text" name="D1">
+            <p>
+                10:00-11:00 AM
+            </p>
+            <input type="text" name="D2">
+            <p>
+                11:00-12:00 AM
+            </p>
+            <input type="text" name="D3">
+            <p>
+                12:00-1:00 PM
+            </p>
+            <input type="text" name="D4">
+            <p>
+                1:00-2:00 AM
+            </p>
+            <input type="text" name="D5">
+            <p>
+                2:00-3:00 PM
+            </p>
+            <input type="text" name="D6">
+            <p>
+                3:00-4:00 PM
+            </p>
+            <input type="text" name="D7"> <br><br><br>
+    
+            <input type="submit" name="submit">
+    </form>
+</body>
+</html>
